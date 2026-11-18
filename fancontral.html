@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Fan Control</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="brand">
+      <span class="fan-icon">❄</span>
+      <div>
+        <h2>SMART FAN</h2>
+        <p>IoT Fan Control System</p>
+      </div>
+    </div>
+
+    <div class="connection">
+      <span id="connectionDot"></span>
+      <span id="connectionText">Disconnected</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <h1>Fan Dashboard</h1>
+      <p>ระบบควบคุมพัดลมผ่าน Wi-Fi</p>
+    </section>
+
+    <section class="card fan-card">
+
+      <div class="fan-circle" id="fanCircle">
+        <span>❄</span>
+      </div>
+
+      <h2 id="fanStatus">พัดลมปิดอยู่</h2>
+
+      <p class="description">
+        สถานะการทำงานของพัดลม
+      </p>
+
+      <div class="buttons">
+        <button id="onButton" class="btn btn-on">
+          <span>⏻</span> FAN ON
+        </button>
+
+        <button id="offButton" class="btn btn-off">
+          <span>⏻</span> FAN OFF
+        </button>
+      </div>
+
+      <p id="message">พร้อมใช้งาน</p>
+
+    </section>
+
+    <section class="card info-card">
+      <h3>Device Information</h3>
+
+      <div class="info-row">
+        <span>Device</span>
+        <strong>ESP32</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Fan Voltage</span>
+        <strong>DC 5V</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Control</span>
+        <strong>Relay ON/OFF</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Connection</span>
+        <strong id="deviceConnection">Offline</strong>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Smart Fan Control Project
+    <br>
+    ESP32 + Web Application
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
